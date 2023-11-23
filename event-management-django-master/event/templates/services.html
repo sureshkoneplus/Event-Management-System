@@ -1,0 +1,50 @@
+{% extends 'base.html' %}{% block body %}
+
+<div  class="container">
+    
+    <div class="container "> 
+        <br><br> 
+        <h1> <center> EVENT BOOKING FORM </center></h1><br><br> 
+        
+        <form style="margin: auto;" class="book-services"  action="https://formspree.io/f/xgejbgyv " method="POST">
+            <table style="margin: auto;">
+              <tr >
+                <td align="right">First Name:</td>
+                <td align="left"><input class="bookServicesInput" type="text" name="first" required /></td>
+              </tr>
+              <tr>
+                <td align="right">Last Name:</td>
+                <td align="left"><input class="bookServicesInput" type="text" name="last" required /></td>
+              </tr>
+              <tr>
+                <td align="right">Email:</td>
+                <td align="left"><input class="bookServicesInput" type="email" name="email" required /></td>
+              </tr>
+              <tr>
+                <td align="right">Mobile Number</td>
+                <td align="left"><input class="bookServicesInput" type="text" name="email" required /></td>
+              </tr>
+              <tr>
+                <td align="right">Select Event:</td>
+                <td align="left">
+                <select class="bookServicesInput" id="event" name ="event list"> 
+                <option> Birthday Party  </option> 
+                <option> Marriage </option> 
+                <option> Catering </option> 
+                <option> Photography</option> 
+                <option> Promotions</option> 
+                <option> Sangeeth</option> 
+                </select> 
+            </td>
+              </tr>
+
+            </table>
+            <button class="bookServicesBtn" type="SUBMIT">SUBMIT</button>  
+          </form>
+        
+        
+        
+
+    </div> 
+</div>
+{% endblock %}    

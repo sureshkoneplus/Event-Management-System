@@ -1,0 +1,343 @@
+
+
+
+
+{% extends 'base.html' %}{% block body %}
+
+<div style="background-image: url('https://wallpapercave.com/wp/wp7488460.jpg'); height: 100vh;" class="container">
+
+    {% if userdetail.user_type is 1 %}
+    
+
+    <div class="banner-ssection " id="bannerSection">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb-4">
+
+                    <h1 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;color:red;padding: 50px" class='text-center banner-section-heading'>Welcome</h1>
+                    
+
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="banner-section-card shadow d-flex flex-column justify-content-center">
+                        <div class="d-flex flex-row justify-content-center">
+                            <img class="banner-section-card-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAfdJREFUSEvFlo1Nw0AMhd1NYBLoJMAkwCTAJJRJKJOAvioPvbh35wuqhKUI2uT82c8/6S7+yXYX4t5HxE1EvEXEcbmGri8FfoqIx4V0iIiHCj4Lvo2Iu8XxV0TgnEtGxoCvli+eI4JgujYDBvre8AAYgAfwafDrUdYzYKDAMeqnrBTL6xIA9zzIfQpqFXsFBkIWGABqh2VpgXIPuRXk0HcFzk1DFm4vSxC5Eh5ks84V2GXGQa5bzlzlIEBUyIaCXIcR2GWWg9yt35225TmyBo5qTIR6g2bcj8Aus/v3rAUGwvJAegeo3n7+z2CykJRAsqQ+UgICIzCM/49VjVtOODxaEHnum2NVgXtyj+D5zEna3As9MLUiK2TsZd2Dq+6+bJhx+uDXWmB1s+QcZS24OpjPAnNe3XyWdQvsIHVwBfc3ErN9aqBllPTWWu2AFtiXhu/hkeRaHJpfV1UKrOTO4NHS4B5B5ZdE7pv81lLAqzWawT1JVe9ZuOaVv1oiqxHM4LybPRuXqpK9tUlXLP/Qkjk78KjzDu6s7dMYsbX8B0M4mG5kfivzhiNY7WevPc98WHef+XRwNTJ+mFHxDqaOXHyvURom4ODeb6uRg7ONVMml+7m5ZpqmlHEG3prj1qxeBFbtas3epprNZDkD3upn8/PV+3izw9kDP8JekR8z81r1AAAAAElFTkSuQmCC" />
+                            <h4 class=" ml-3 baner-section-card-title">Birthday</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="banner-section-card shadow d-flex flex-column justify-content-center">
+                        <div class="d-flex flex-row justify-content-center">
+                            <img class="banner-section-card-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAUNJREFUSEvtltsNwjAMAN1NYBOYBJgEmASYBDaBTUCH4spqnSaElPJRS1EriH1+xU0jE0kzEVdKwSsRWYR1E5FHWNlxfAIGdgowD4ADRxHhmZRc8FVEAOcI8HMqAykw6QTKU2UXXjTFOMTamH38xz5K4EoKbCMlCoV6xnCOUmhmiPxQAkZpHxQHjXSMWz0cxeGexCLG+3vYTbqWOcU1e9DFBrprL+UxsPUaxaxONeBk1ClwSbTK16jd3oiBtamIlIhLZNBGDPwsaKquc3T4NvzY44wJtnX+XzCHn7NrhwB1pl7IUIejY/epLfSwcbFn2qbAnl2tlw79b8Fqj3nwHqMWbGsyFridZL8Gt6N3BuvXaKwau6lmyjBtrNTuahfs3TZqg9ue6o4yoibdetWpBe5dBFNXn5KvUpbODM5KU41Nk6X6BUSheB85iKFFAAAAAElFTkSuQmCC" />
+                            <h4 class=" ml-3 baner-section-card-title">Sangeet</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="banner-section-card shadow d-flex flex-column justify-content-center">
+                        <div class=" d-flex flex-row justify-content-center">
+                            <img class="banner-section-card-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAWVJREFUSEvtlj1OAzEQRl9uAjeBjgokuAAUcI3ANaAgFwgSVHTASeAmRB+yI8eyxzOrlbbB1W5i+803v7tiobVaiMsU8DVw1DB4A/x4hUTAgn0bFwt66oV7wSNotscN94C90BC8BX6uYnjijVuxT8rLeH8BBzlQg38nQCJHjrNBJfgeWEduSZe0Mrx3zU1SflBOXrAOf1auVInJ6JERD4A4IbBgKpfeElT5YeVEGKxEUXzyugXO0ss78JSeBf8wlIfB+9gAr8B5JfsNuEi/WSELg3MSSuljx9d3hfJedYTApZu3wGUH/AJcpf/UWluJFgKXSeUFz6JYInLhe1xttdiQYoEjyaWaVlm1VhhcTx2rnKzRGQbLejV5HbSGvWp41gZSjjzBWy2z597S5ZMU1zETXIk06s9DsJUUwaHV3d5UPOqzc8D3Y7j+EPCOt6gRCkvOjb+znm+uKMS1/x/sctMcmxZz9Q74SmIf0Z/sMQAAAABJRU5ErkJggg==" />
+                            <h4 class=" ml-3 baner-section-card-title">Photography</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="banner-section-card shadow d-flex flex-column justify-content-center">
+                        <div class="d-flex flex-row justify-content-center">
+                            <img class="banner-section-card-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAb9JREFUSEvFltFRBSEMRfM60UrUTrQStRK1ErUS7UTnOGTnbjYQ0HEeP/uxwMm9BJKTnWmczsS134AvzOzazPh+tsD5vq2ImAUDuTWz+8HmDn+ZCaICzwBjLB7AozhyiHcEBvraLF1x0ecSwE0P3gMD/VikPZsZKp9aDrC8C++BUUoCrQzUeYI9SD6k8AxMxCTSzHDQu5kB06Fw3LjTnxGMStTOjio53TlUA96uXFy4opbgKrDmClCO42fEhSQUk2cGiRTtzdap6ssMrDaz6VUnwYgc2/zVqoIkX3CSsSWgKo4T2FivhgNmlfp8FUTAJNrOagVjCWBsj/BVsJ7ztlYVa/o7mOAifBXMHl9NfqpYLdHHwOH+kuFEdr7ZXWatOlmCM1Ue9SiZDg9FAG9OqtXdO9dIM2Cc2K5MW6fP78aL91gnRbvVspFq3VOPb+dGBKvqLPoZuNZjvRE7IVWRyM56Bh4dKYuEZ7A2AH+FZ851H/nYCMSaulLFYq6kRUItylofAqCZY4waP/4fSqFuPlPWqu4yy/DydavAvinqUTjqTNwNEqmsXLNgDYAgvGZ7U/9vDX1Vc5f/rypeBvQWfAPpnHofzex/EgAAAABJRU5ErkJggg==" />
+                            <h4 class=" ml-3 baner-section-card-title">Wedding</h4>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="col-12 col-md-4">
+                    <div class="banner-section-card shadow d-flex flex-column justify-content-center">
+                        <div class="d-flex flex-row justify-content-center">
+                            <img class="banner-section-card-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAWNJREFUSEvVlgFOwzAMRf9OwjgJcJNxEuAksJMAJ4GjoIfqyU3tJilEhUjTtCzN87d/nRy00zjsxNW/BB8l8XnbkrUexUA+JT1KenAw5s6SXqY5fldHDQzsVIBqm/pA0iBq4FdJtwHJNucb9QRYDv67zqJcAz9PannWQFfTHBuaGqAfkp4myI0LlvTfR/A1MJtZXdPIE0WWqVR1BvYpRgmG6hnegCE8ApcpBmyObYWbIa32vHJ3/uEIbCleLG6lTuuAIgJzLlSXYK8W8HsnrFxuZmR+VjIPJj2ARw4c/l22PwGmFrh55AgVWyMYCb40ntJcWYv8jWBmzi7BIw12SXNpLn6PTPdMZNRARqhetN2sV/tG8tP6hh0wA5NyjBadsz2BdJ9OVu/e24cPKj2LI3NFaso7Vovi6lFau/oA2dLROAJXb58t4C2vmL8ahRlqAfMgtW41Gkqrd+1WcEtdu9bsBv4Cr49IHxBXD7QAAAAASUVORK5CYII=" />
+                            <h4 class=" ml-3 baner-section-card-title">Catering</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="banner-section-card shadow d-flex flex-column justify-content-center">
+                        <div class=" d-flex flex-row justify-content-center">
+                            <img class="banner-section-card-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAZNJREFUSEvFlu1NAzEMht1JgE1gE5gEmASYBDaBTUBPdY5yrr+uV9RIVX9cksfva8fJQa40DlfiyjngWxG5FxH+f5bA+f/aIqILBvIoIs/J5gr/6ARRgTtAL5Z3EXmdHDmZk4GBfi6WbnFR5+LAQwSPwEC/z6GZNcCfPOsjMEopoEsMV7kHflsKyULZQKvYfquCJOcoH8OC2QC1UcGsFptJVU2Q73HkLDhSC+Mkaie6DA4U+HFYMAXF4koxAc7z9OySisg1vt154Mxmq9gLkDTgSnYiht2zYjoTSqIxW+2BaRgvy+LfYBMNbmX1HvAcVLbPCG5WTLRZL+4UF0KzHuAq3pJjz0lyS+AojsZusOZSATcFUOdR1ccmNFtd9eequBKh49Pg2XOc5WcveFUjFpyp3gtOWyaedC6J6lKwtpeXBAuqZt/J5Txn1Sq9ljlPrgptC3xlcQW+hPLw9WGPU9QUqtelt27u26471StTF3W6Egq5Himk6KVyeqCbSSMA/Wk69En0Lw/6Zlz9aV2r+zs2Z/4BhfNjH71DHOkAAAAASUVORK5CYII=" />
+                            <h4 class=" ml-3 baner-section-card-title">Promotions</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div style="margin-top: 200px; margin-bottom: 100px;" class="carousel-container ">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-card1 d-block w-100 d-flex flex-column justify-content-center">
+                        <h1 class="text-center text-danger ">About Us</h1>
+                        <p class="text-center text-white">Welcome to our comapany, your premier partner for all your event management needs. With a relentless passion for delivering unforgettable experiences, we're dedicated to making your events exceptional, seamless, and stress-free.</p>
+                    </div>
+    
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-card2 d-block w-100 d-flex flex-column justify-content-center">
+                        <h1 class="text-center text-danger">Our Story</h1>
+                        <p class="text-center text-white">Established in 2019, VR EVent Management was born out of a deep love for the art of event planning. Our founders, [Suresh], envisioned a world where events would not just be gatherings but memories etched in the hearts of those who attend. With a team of creative and dedicated individuals, we have brought that vision to life.</p>
+                    </div>
+    
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-card3 d-block w-100 d-flex flex-column justify-content-center">
+                         <h1 class="text-center text-danger">Our Team</h1>
+                        <p class="text-center text-white">Our team is the heartbeat of our organization. With a diverse group of professionals including event planners, designers, coordinators, and technical experts, we have the collective skills and experience to tackle any event, no matter the size or complexity. We're dedicated to staying ahead of industry trends and continuously enhancing our knowledge to offer you the best in event management.</p>
+                    </div>
+    
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    
+    
+        
+    
+        <div class="embed-responsive embed-responsive-16by9 mb-5">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/B_2NQ9c9gFo?si=P3t1-dthogZtboHr" allowfullscreen></iframe>
+          </div>
+    
+        <div class="Gallery-section d-flex flex-column justify-content-center" id="gallerySection">
+            <div class="container">
+                <div class="row">
+                    <div class='col-12'>
+                        <h1 class='text-center banner-section-heading'>Gallery</h1>
+                        <p class="  text-center banner-section-discription">Events is A Professionality Managed Event</p>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <img class=" mb-3 Gallery-section-images" src="https://europeanbusinessmagazine.com/wp-content/uploads/2019/05/event.jpg" />
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <img class=" mb-3 Gallery-section-images" src="https://cdn.business2community.com/wp-content/uploads/2018/02/community-events.jpeg" />
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <img class=" mb-3 Gallery-section-images" src="https://myventurepad.com/wp-content/uploads/2018/09/Corporate-Events-DJ.jpg" />
+                    </div>
+                    
+                    <div class="col-12 col-md-4">
+                        <img class=" mb-3 Gallery-section-images" src="https://wallpaperaccess.com/full/2489661.jpg" />
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <img class=" mb-3 Gallery-section-images" src="https://wallpapercave.com/wp/wp7488460.jpg" />
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <img class=" mb-3 Gallery-section-images" src="https://tribuneonlineng.com/wp-content/uploads/2016/11/event-planner.jpg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+        
+    
+    
+    
+        <div class="Contact-Us" id="contactusSection">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class=' text-center banner-section-heading'>Contact Form</h1>
+                        <p class=" mb-5  text-center banner-section-discription">Events is A Professionality Managed Event</p>
+                        <form action="/MainHome" method = "POST">
+                            <div class="mb-1">
+                                <label class="Staff-Sign-Up-Page-Card-Label" for="staffSignUpFirstName">FirstName</label>
+                                <div class="d-flex flex-row">
+                                    <i class="fa-solid fa-user Staff-Sign-Up-Page-Card-icon pt-1"></i>
+                                    <input name="FirstName" class="Staff-Sign-Up-Page-Card-Input ml-1" id="staffSignUpFirstName" type="text" placeholder="Type your First Name">
+    
+                                </div>
+                                <p class="error-msg" id="FirtNameErrorMsg"></p>
+                                <hr />
+                            </div>
+                            <div class="mb-2">
+                                <label class="Staff-Sign-Up-Page-Card-Label" for="staffSignUpLastName">Last Name</label>
+                                <div class='d-flex flex-row'>
+                                    <i class="fa-solid fa-lock Staff-Sign-Up-Page-Card-icon pt-1"></i>
+                                    <input name="LastName" class="Staff-Sign-Up-Page-Card-Input ml-1" id="staffSignUpLastName" type="text" placeholder="Type your Last Name">
+                                </div>
+                                <p class="error-msg" id="LastNameErrorMsg"></p>
+                                <hr class="mb-1" />
+                            </div>
+    
+                            <div class="mb-1">
+                                <label class="Staff-Sign-Up-Page-Card-Label" for="staffSignUpRegistrationId">Subject</label>
+                                <div class="d-flex flex-row">
+                                    <i class="fa-solid fa-user Staff-Sign-Up-Page-Card-icon pt-1"></i>
+                                    <input name="Subject" class="Staff-Sign-Up-Page-Card-Input ml-1" id="staffSignUpRegistrationId" type="text" placeholder="Subject">
+    
+                                </div>
+                                <p class="error-msg" id="RegistrationIdErrorMsg"></p>
+                                <hr />
+                            </div>
+    
+                            <div class="mb-1">
+                                <label class="Staff-Sign-Up-Page-Card-Label" for="staffSignUpEnterPasssword">Mobile Number</label>
+                                <div class="d-flex flex-row">
+                                    <i class="fa-solid fa-user Staff-Sign-Up-Page-Card-icon pt-1"></i>
+                                    <input name="Number" class="Staff-Sign-Up-Page-Card-Input ml-1" id="staffSignUpEnterPassword" type="textarea" placeholder="Type your mobile number">
+    
+                                </div>
+                                <p class="error-msg" id="NewPasswordErrorMsg"></p>
+                                <hr />
+                            </div>
+                            <div class="mb-1">
+                                <label class="Staff-Sign-Up-Page-Card-Label" for="staffSignUpEnterPasssword">Email Id</label>
+                                <div class="d-flex flex-row">
+                                    <i class="fa-solid fa-user Staff-Sign-Up-Page-Card-icon pt-1"></i>
+                                    <input name="EmailId" class="Staff-Sign-Up-Page-Card-Input ml-1" id="staffSignUpEnterPassword" type="email" placeholder="Type your Email Id">
+    
+                                </div>
+                                <p class="error-msg" id="NewPasswordErrorMsg"></p>
+                                <hr />
+                            </div>
+                            <div class="mb-1">
+                                <label class="Staff-Sign-Up-Page-Card-Label" for="staffSignUpEnterPasssword">Message</label>
+                                <div class="d-flex flex-row">
+                                    <i class="fa-solid fa-user Staff-Sign-Up-Page-Card-icon pt-1"></i>
+                                    <input name="Message" class="Staff-Sign-Up-Page-Card-Input ml-1" id="staffSignUpEnterPassword" type="textarea" placeholder="Type your message">
+    
+                                </div>
+                                <p class="error-msg" id="NewPasswordErrorMsg"></p>
+                                <hr />
+                            </div>
+    
+    
+    
+                            <div>
+                                <button type="submit" value="Submit" class="Staff-Sign-Up-Page-Card-button">SUBMIT</button>
+                            </div>
+    
+                        </form>
+    
+    
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+        <div style="margin-bottom: 100px;" class="Portfolio-work-done-section" id="workdoneSection">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="work-done-cards text-center">
+                            <div class="work-done-icons">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="currentColor" class="bi bi-hand-thumbs-up " viewBox="0 0 16 16">
+                                    <path d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2.144 2.144 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a9.84 9.84 0 0 0-.443.05 9.365 9.365 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111L8.864.046zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a8.908 8.908 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.224 2.224 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.866.866 0 0 1-.121.416c-.165.288-.503.56-1.066.56z" />
+                                </svg>
+                            </div>
+                            <hr class="work-done-horizontal-row" />
+                            <h1 class="work-done-count">252 </h1>
+                            <p class="work-done-discription">Events Completed</p>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="work-done-cards text-center">
+                            <div class="work-done-icons">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="currentColor" class="bi bi-file-text" viewBox="0 0 16 16">
+                                    <path d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1H5z" />
+                                    <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z" />
+                                </svg>
+                            </div>
+                            <hr class="work-done-horizontal-row" />
+                            <h1 class="work-done-count">200</h1>
+                            <p class="work-done-discription">Satisfied Customers</p>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="work-done-cards text-center">
+                            <div class="work-done-icons">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="55 " height="55" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                </svg>
+                            </div>
+                            <hr class="work-done-horizontal-row" />
+                            <h1 class="work-done-count">1500</h1>
+                            <p class="work-done-discription">Hours Worked</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="follow-us-section pt-5 pb-5" id="followUsSection">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="follow-us-section-heading">Follow Us</h1>
+                        <p class="  text-center banner-section-discription">Events is A Professionality Managed Event</p>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex flex-row justify-content-center">
+                            <div class="follow-us-icon-container">
+                                <a href="https://twitter.com/i/flow/login" target="_blank"><i class="fab fa-twitter icon"></i></a>
+                            </div>
+                            <div class="follow-us-icon-container">
+                                <a href="https://www.instagram.com/?hl=en" target="_blank"><i class="fab fa-instagram icon"></i></a>
+                            </div>
+                            <div class="follow-us-icon-container">
+                               <a href="https://www.facebook.com/" target="_blank"> <i class="fab fa-facebook icon"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+    
+    
+    
+    
+
+    {% endif %}
+    {% if userdetail.user_type is 2 %}
+
+    <h2>Your Places</h2>
+    {% for place in places %}
+
+    {{place.place_name}}
+    {{place.place_price}}
+
+    {{place.place_owner}}
+
+    {% endfor %}
+    {% endif %}
+    {% if userdetail.user_type is 3 %}
+    <h2>Your Services</h2>
+    {% for service in services %}
+    {{service.service_name}}
+    {{service.service_owner}}
+    {{service.service_price}}
+    {% endfor %}
+    {% endif %}
+</div>
+
+{% endblock %}
